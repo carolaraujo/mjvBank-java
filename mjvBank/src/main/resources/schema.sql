@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS TB_CLIENTE;
 CREATE TABLE TB_CLIENTE (
 id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(250) NOT NULL,
+usuario VARCHAR(50) NOT NULL,
 cpf VARCHAR(11) NOT NULL,
 saldo DECIMAL(10,2) DEFAULT 0.00,
 agencia INT DEFAULT NOT NULL,
@@ -11,6 +12,6 @@ conta INT DEFAULT NOT NULL
 );
 
 INSERT INTO TB_CLIENTE (nome, cpf, saldo, agencia, conta) VALUES
-('Caroline Araujo', '22255567831', '1500000.00', 1, 252680),
-('Lita Araujo', '87382974637', '500000.00', 1, 805616),
-('Felipe Souza', '32728493749', '1000000.001', 1, 776352);
+('Caroline Araujo', 'cabidu', '22255567831', '1500000.00', 1, 252680),
+('Lita Araujo', 'lita', '87382974637', '500000.00', 1, 805616),
+('Felipe Souza', 'cabrito', '32728493749', '1000000.001', 1, 776352);

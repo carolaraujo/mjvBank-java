@@ -1,4 +1,4 @@
-package br.com.mjv.model;
+package br.com.mjv.bank.cliente.model;
 
 
 /**
@@ -8,8 +8,17 @@ package br.com.mjv.model;
 
 public class Cliente {
 
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
 	private Integer id;
 	private String nome;
+	private String usuario;
 	private String cpf;
 	private Double saldo;
 	private Integer conta;

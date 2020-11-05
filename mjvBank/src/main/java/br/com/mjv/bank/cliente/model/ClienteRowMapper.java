@@ -1,9 +1,16 @@
-package br.com.mjv.model;
+package br.com.mjv.bank.cliente.model;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
+
+/**
+ * Classe de mapeamento do modelo {@link Cliente} para a tabela TB_CLIENTE
+ * @author caroline.araujo
+ *
+ */
 
 public class ClienteRowMapper implements RowMapper<Cliente> {
 
@@ -13,6 +20,7 @@ public class ClienteRowMapper implements RowMapper<Cliente> {
 		
 		cliente.setId(rs.getInt("id"));
 		cliente.setNome(rs.getString("nome"));
+		cliente.setUsuario(rs.getString("usuario"));
 		cliente.setCpf(rs.getString("cpf"));
 		cliente.setSaldo(rs.getDouble("saldo"));
 		cliente.setAgencia(rs.getInt("agencia"));
